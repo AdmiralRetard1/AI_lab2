@@ -75,7 +75,7 @@ def find_solution_informed_manhattan(start, target):
 
                 # depending on the chosen way to solve, choose constructor for node
                 new_node = node.Node("".join(ch for ch in new_layout), target_layout=target.layout,
-                                     old_node=next_node,
+                                     old_node_layout=next_node.layout,
                                      level=next_node.level + 1)
 
                 # checking newly created node
@@ -196,7 +196,7 @@ def find_solution_informed_tiles(start, target):
 
                 # depending on the chosen way to solve, choose constructor for node
                 new_node = node.Node2("".join(ch for ch in new_layout), target_layout=target.layout,
-                                      old_node=next_node,
+                                      old_node_layout=next_node.layout,
                                       level=next_node.level + 1)
 
                 # checking newly created node
