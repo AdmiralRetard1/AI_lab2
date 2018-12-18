@@ -9,6 +9,6 @@ print("\nChoose algorithm:")
 print("1 - Manhattan ways")
 print("2 - Tiles not on their position")
 if input() == "1":
-    algorithms.find_solution_informed_manhattan(start_node, target_node)
+    algorithms.find_solution_informed(start_node, target_node, way=1)
 else:
-    algorithms.find_solution_informed_tiles(start_node, target_node)
+    algorithms.find_solution_informed(start_node, target_node)

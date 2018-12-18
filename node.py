@@ -4,7 +4,7 @@ import math
 # class for node
 class Node(object):
 
-    # function to enter layout with checking it for uniqueness and fullness
+    # class constructor
     def __init__(self, new_layout, target_layout, old_node_layout=None, level=0):
         self.layout = new_layout
         self.level = level
@@ -24,7 +24,7 @@ class Node(object):
         return True if self.layout == comp_node.layout else False
 
 
-# class for 2nd euristic
+# class for 2nd heuristic
 class Node2(Node):
     # function to enter layout with checking it for uniqueness and fullness
     def __init__(self, new_layout, target_layout, old_node_layout=None, level=0, ):
@@ -54,7 +54,7 @@ def count_cost(target_layout, new_layout, level=0):
     return way_cost
 
 
-# function that counts the cost of way of current node
+# function that counts the cost of way of current node (second way)
 def count_cost2(target_layout, new_layout, level=0):
     counter = 0
     for n in new_layout:
@@ -120,7 +120,7 @@ def print_nodes(lst):
         print("Empty list")
 
 
-# this does the same as previou function, but without wayCost
+# this does the same as previous function, but without wayCost
 def print_list(lst):
     lines = ["", "", ""]
     res = ""
